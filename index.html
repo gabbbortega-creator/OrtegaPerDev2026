@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title><strong>My Personal Growth Journey</strong></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Elegant Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --accent: #88b682;
+  --accent-soft: rgba(14, 255, 62, 0.911);
+  --glass: rgba(255,255,255,0.14);
+  --glass-border: rgba(255,255,255,0.28);
+  --text-main: #ffffff;
+  --text-soft: #d5dbe4;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(47,255,156,0.18), transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(255,255,255,0.10), transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(47,255,156,0.10), transparent 50%),
+    linear-gradient(to bottom, #05070b, #010204);
+  color: var(--text-main);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 5.5rem 1.5rem 3rem;
+}
+
+header h1 {
+  font-size: 3.3rem;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  max-width: 680px;
+  margin: 1.2rem auto 0;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(16px);
+  background: rgba(41, 88, 47, 0.841);
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(108, 103, 103);
+  font-size: 0.95rem;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.35s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* MUSIC BUTTON */
+/* MUSIC BUTTON — NAV ALIGNED */
+.music-control {
+  background: rgba(0, 177, 50, 0.467);
+  border: 1px solid var(--accent-soft);
+  color: var(--accent);
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  transition: all 0.35s ease;
+  align-self: center;
+}
+
+.music-control:hover {
+  background: var(--accent);
+  color: #e9fde5;
+  transform: translateY(-2px);
+}
+
+
+/* SECTIONS */
+section {
+  padding: 5rem 1.5rem;
+}
+
+.container {
+  max-width: 920px;
+  margin: auto;
+}
+
+/* GLASS PANELS */
+.panel {
+  backdrop-filter: blur(20px);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 34px;
+  padding: 3.2rem;
+  margin-bottom: 4.5rem;
+  transition: transform 0.7s ease, box-shadow 0.7s ease;
+}
+
+.panel:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 35px 90px rgba(47,255,156,0.28);
+}
+
+/* SECTION TITLES */
+.panel h2 {
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* TEXT */
+.panel p {
+  line-height: 1.85;
+  color: var(--text-soft);
+}
+
+/* IMAGE */
+.panel img {
+  width: 100%;
+  border-radius: 26px;
+  margin-top: 2.3rem;
+  transition: transform 0.9s ease, filter 0.9s ease;
+  filter: brightness(0.88);
+}
+
+.panel:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+   ========================= */
+@media (max-width: 768px) {
+
+  header {
+    padding: 4rem 1.2rem 2.5rem;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  section {
+    padding: 3.5rem 1.2rem;
+  }
+
+  .panel {
+    padding: 2rem 1.8rem;
+    border-radius: 26px;
+  }
+
+  .panel h2 {
+    font-size: 1.15rem;
+  }
+
+  .panel p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .panel img {
+    margin-top: 1.8rem;
+    border-radius: 20px;
+  }
+
+  .music-control {
+    bottom: 18px;
+    right: 18px;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .panel {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .panel h2 {
+    font-size: 1.05rem;
+  }
+
+  .panel p {
+    font-size: 0.9rem;
+  }
+}
+/* =========================
+   STATIC TAB GLOW (ELEGANT)
+   ========================= */
+
+nav a {
+  position: relative;
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(0, 255, 170, 0.6),
+    0 0 16px rgba(0, 255, 170, 0.35),
+    0 0 28px rgba(0, 255, 170, 0.2);
+  transition:
+    transform 0.35s ease,
+    text-shadow 0.35s ease;
+}
+
+/* Lift on hover */
+nav a:hover {
+  transform: translateY(-4px);
+  text-shadow:
+    0 0 10px rgba(0, 255, 170, 0.85),
+    0 0 22px rgba(0, 255, 170, 0.6),
+    0 0 40px rgba(0, 255, 170, 0.4);
+}
+
+/* Click / active */
+nav a.active {
+  transform: translateY(-5px);
+  text-shadow:
+    0 0 12px rgba(0, 255, 170, 1),
+    0 0 26px rgba(0, 255, 170, 0.75),
+    0 0 48px rgba(0, 255, 170, 0.5);
+}
+
+/* Soft glowing underline (always visible, not boxy) */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 110%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 170, 0.9),
+    transparent
+  );
+  transform: translateX(-50%);
+  box-shadow: 0 0 14px rgba(0, 255, 170, 0.8);
+  opacity: 0.75;
+}
+
+/* Slightly stronger underline on hover */
+nav a:hover::after,
+nav a.active::after {
+  opacity: 1;
+}
+
+/* =========================
+   ROUNDED NAVIGATION BAR
+   ========================= */
+
+nav {
+  border-radius: 999px;
+  margin: 0.8rem auto;
+  width: fit-content;
+  padding: 0.9rem 1.6rem;
+}
+
+/* Ensure contents stay centered nicely */
+nav a,
+nav .music-control {
+  border-radius: 999px;
+}
+
+nav {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   VERTICAL LEFT NAV (SMALL)
+   ========================= */
+
+nav {
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+
+  padding: 1rem 0.8rem;
+  width: auto;
+
+  border-radius: 999px;
+  z-index: 999;
+}
+
+/* Make links smaller and centered */
+nav a {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  text-align: center;
+}
+
+/* Adjust underline position for vertical layout */
+nav a::after {
+  bottom: -6px;
+}
+
+/* Music button fits the vertical nav */
+.music-control {
+  margin: 0.6rem 0 0;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.7rem;
+}
+
+/* =========================
+   MOBILE ADJUSTMENT
+   ========================= */
+@media (max-width: 768px) {
+  nav {
+    left: 0.5rem;
+    padding: 0.7rem 0.6rem;
+    gap: 0.7rem;
+  }
+
+  nav a {
+    font-size: 0.7rem;
+  }
+
+  .music-control {
+    font-size: 0.65rem;
+  }
+}
+
+/* =========================
+   HERO TITLE HIGHLIGHT
+   ========================= */
+
+header h1 {
+  
+  position: relative;
+
+  text-shadow:
+    0 0 12px rgba(0, 255, 170, 0.6),
+    0 0 28px rgba(0, 255, 170, 0.35),
+    0 0 55px rgba(0, 255, 170, 0.2);
+
+  transition:
+    transform 0.6s ease,
+    text-shadow 0.6s ease;
+}
+
+/* Gentle lift + stronger glow */
+header h1:hover {
+  transform: translateY(-6px);
+  text-shadow:
+    0 0 18px rgba(0, 255, 170, 0.9),
+    0 0 40px rgba(0, 255, 170, 0.65),
+    0 0 80px rgba(0, 255, 170, 0.45);
+}
+
+/* =========================
+   FAINT IMAGE BACKGROUND FOR TITLE
+   ========================= */
+
+header h1 {
+  position: relative;
+  display: inline-block;
+  padding: 1.2rem 2.6rem;
+  z-index: 1;
+  text-transform: uppercase; /* keeps it all caps */
+  color: white; /* text stays visible */
+}
+
+/* Background image behind the title */
+header h1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  /* Your picture as background */
+  background: url("TITLE.jpg") center / cover no-repeat;
+
+  /* Faint / translucent effect */
+  opacity: 0.12; /* adjust between 0.05 to 0.2 for subtlety */
+
+  border-radius: 999px; /* makes it rounded behind text */
+  pointer-events: none; /* ensures it doesn't block clicks */
+
+  backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+
+}
+
+/* =========================
+   TITLE SUBHEAD (GLOWING)
+   ========================= */
+
+.title-subhead {
+  margin-top: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  color: #eafff4;
+  text-transform: uppercase;
+  opacity: 0.9;
+
+  text-shadow:
+    0 0 6px rgba(0, 255, 170, 0.55),
+    0 0 14px rgba(0, 255, 170, 0.35),
+    0 0 28px rgba(0, 255, 170, 0.2);
+
+  transition:
+    transform 0.5s ease,
+    text-shadow 0.5s ease;
+}
+
+/* Slight lift + glow on hover (matches title behavior) */
+header:hover .title-subhead {
+  transform: translateY(-3px);
+  text-shadow:
+    0 0 10px rgba(0, 255, 170, 0.75),
+    0 0 22px rgba(0, 255, 170, 0.55),
+    0 0 44px rgba(0, 255, 170, 0.35);
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop autoplay muted>
+  <source src="Ride Home.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+  <h1>ANG KWENTO NI BATANGROBOT</h1>
+  <h2 class="title-subhead">My Personal Growth Journey</h2>
+  <p>a website-based scrapbook created by Gabriel Ortega. </p>
+  <p>(note that the compatibility in browsers might differ from the device used)</p>
+  <p><strong>Gabriel Luis C. Ortega - 12 Del Mundo - Personal Development</strong></p>
+</header>
+
+<nav>
+<nav>
+  <a href="#self"><strong>SELF-ASSESSMENT</strong></a>
+  <a href="#values"><strong>VALUES & BELIEFS</strong></a>
+  <a href="#goals"><strong>GOALS</strong></a>
+  <a href="#coping"><strong>COPING</strong></a>
+  <a href="#reflection"><strong>REFLECTION</strong></a>
+
+  <!-- MUSIC BUTTON IN NAV -->
+  <button class="music-control" onclick="toggleMusic()">▶ PLAY MUSIC</button>
+</nav>
+
+</nav>
+
+<section id="self">
+  <div class="container">
+    <div class="panel">
+      <h2><strong>Self-Assessment</strong></h2>
+      <p>
+        <strong>Hi, my name is Gab ! I am from the section of 12-Del Mundo !</strong> 
+        I thrive in the digital and technical field. Robotics, LEGO technique
+        building, and programming in Python, HTML, and JavaScript define my
+        strengths. I am confident in public speaking and enjoy fixing and
+        understanding how things work.
+      </p>
+      <p>
+        I love music, building mechanisms, programming, deep reflections, collecting perfumes, watching movies,
+        playing games, and exploring ideas with curiosity.
+      </p>
+      <img src="1-1.jpg" alt="">
+      <img src="1-2.jpg" alt="">
+      <img src="1-3.jpg" alt="">
+      <img src="1-4.png" alt="">
+      <img src="1-5.png" alt="">
+      <img src="1-6.png" alt="">
+      <img src="1-7.JPG" alt="">
+      <img src="1-8.JPG" alt="">
+      <img src="1-9.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="values">
+  <div class="container">
+    <div class="panel">
+      <h2><strong>Personal Values and Beliefs</strong></h2>
+      <p>
+        <strong>MEMENTO VIVERE</strong> — remember to live. I believe life is meant
+        to be lived fully. I respect all religions for their ability to unite
+        people. I believe opportunities are everywhere, things will eventually get better, and
+        love changes people; <stong>it conquers all.</stong>
+      </p>
+      <img src="4-1.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="goals">
+  <div class="container">
+    <div class="panel">
+      <h2><strong>Short-Term and Long-Term Goals</strong></h2>
+      <p><strong>Short-term:</strong> to Graduate Grade 12, to enter college, and to become better every day.</p>
+      <p><strong>Long-term:</strong> to become a Computer Science graduate, to work as an RPA developer, to give back to my family for all the love and sacrifices, and to build a stable, happy family and future.</p>
+      <img src="3-1.jpg" alt="">
+      <img src="3-2.jpg" alt="">
+      <img src="3-3.png" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="coping">
+  <div class="container">
+    <div class="panel">
+      <h2><strong>Coping Strategies for Stress</strong></h2>
+      <p>
+        I see the mind as an algorithm. What I feed it shapes who I become. I cope
+        by choosing positive thinking, emotional discipline, reflection, and
+        learning when to speak up.
+      </p>
+      <img src="3-4.png" alt="Coping">
+    </div>
+  </div>
+</section>
+
+<section id="reflection">
+  <div class="container">
+    <div class="panel">
+      <h2>Reflection: <strong>How I Want to Grow as a Person</strong></h2>
+      <p>
+        As I continue to grow, I want to become a confident, self-aware, and emotionally intelligent person. I believe that personal growth starts with accepting who I am while still striving to improve. Understanding my strengths and weaknesses helps me make better choices, handle challenges more calmly, and build healthier relationships with the people around me. Confidence, for me, does not mean being perfect, but trusting myself and knowing that I am capable of learning and growing.
+
+
+        Emotionally, I want to be more aware of my feelings and how they affect my actions. By developing emotional intelligence, I hope to respond thoughtfully instead of reacting impulsively, especially during difficult situations. This growth will allow me to communicate better, empathize with others, and maintain balance in my life. Being emotionally grounded is important to me because it helps create peace within myself and with others.
+
+
+        In the future, I see myself becoming a Computer Science graduate and working as an RPA developer. I am drawn to this path because it allows me to create, solve problems, and contribute to real-world solutions through technology. Beyond personal success, one of my biggest goals is to give back to my family. Their support motivates me to work hard, and I want to repay that love by providing stability and security for them.
+
+
+        More than achievements or titles, I want to build a stable and happy future where I genuinely feel alive. I want to live in a place, and a life, where I feel purposeful, fulfilled, and at peace. Growth, for me, is not just about reaching goals but about becoming someone who lives meaningfully, stays true to themselves, and continues to evolve.
+      </p>
+      <!-- <img src="images/reflection.jpg" alt="Reflection"> -->
+    </div>
+  </div>
+</section>
+
+<footer>
+  © Gabriel Ortega - 2026
+</footer>
+
+<script>
+const music = document.getElementById("bgMusic");
+const btn = document.querySelector(".music-control");
+let playing = false;
+
+// Autoplay after first user interaction
+function enableMusic() {
+  music.muted = false;
+  music.play();
+  btn.textContent = "⏸ Pause";
+  playing = true;
+
+  document.removeEventListener("click", enableMusic);
+  document.removeEventListener("touchstart", enableMusic);
+}
+
+// Listen for first interaction (desktop + mobile)
+document.addEventListener("click", enableMusic);
+document.addEventListener("touchstart", enableMusic);
+
+function toggleMusic() {
+  if (!playing) {
+    music.play();
+    btn.textContent = "⏸ Pause";
+  } else {
+    music.pause();
+    btn.textContent = "▶ Music";
+  }
+  playing = !playing;
+}
+
+
+</script>
+
+
+
+</body>
+</html>
